@@ -1,0 +1,243 @@
+=============================================
+                  array
+=============================================
+
+> used to store similar data although we can store different data
+
+> special types of object
+
+> can store multiple values in a single variable
+> refer to elements by their index number ,  index(singular) , indices(plural)
+
+> ordered, changeable, allows duplicate values
+
+________________________________________________________
+let marks = [45, 67, 89, 23, 90];
+
+        console.log(typeof marks); // Output: object
+
+        console.log("Original Marks:", marks);
+        console.log(marks.length); // Output: 5
+
+        console.log("First Mark:", marks[0]); // Output: 45
+        console.log("no Mark:", marks[100]); // Output: undefined
+        console.log("Last Mark:", marks[marks.length - 1]); // Output: 90
+
+        let temp = marks;
+        temp[0] = 100;
+        console.log("After modifying temp:");
+        console.log("Marks:", marks); // Output: [100, 67, 89, 23, 90]
+        console.log("Temp:", temp);   // Output: [100, 67, 89, 23, 90]  
+________________________________________________________
+
+> arrays are reference types
+> when we assign an array to another variable, both variables point to the same array in memory
+> modifying one variable will affect the other
+
+> to create a copy of an array, we can use methods like slice() or spread operator (...)
+
+
+
+
+
+================================
+ mutable 
+================================
+> arrays are mutable, meaning we can change their elements after creation
+________________________________________________________
+ let prices = [100, 200, 300, 400, 500];
+        prices[0] = 150;
+        console.log("Updated Prices:", prices); // Output: [150, 200, 300, 400, 500]
+    </script>
+________________________________________________________
+
+
+==============
+display all elements
+========================
+__________________________________________________________
+ const fruits = ["Apple", "Banana", "Cherry"];
+
+// dispaly using for in
+        for(i in fruits){
+            console.log(fruits[i])
+        }
+
+        // display using for of
+        for(fruit of fruits){
+            console.log(fruit)
+        }
+_______________________________________________________________
+
+sOme practices
+______________________________________________
+ let marks =[1,2,3,4,5]
+        let sum =0;
+        for(let i = 0; i< marks.length ; i++){
+            sum += marks[i];
+        }
+        console.log("average marks :", sum/marks.length)
+_______________________________________________________________
+    // reducing the value of prices by 10%
+        const prices =[300,34,56,34,23];
+        for(i in prices){
+             prices[i] *= 0.9;
+        }
+        console.log(prices)
+_________________________________________________________________
+
+
+
+
+
+
+================================================================
+                    Array methods
+================================================================
+
+there are 2 types
+1. some change the array
+2. some makes or create the new array
+
+
+
+========================================
+1.push -> add a element or elements at last
+=========================================
+
+=========================================
+2.pop -> removes the last element
+=========================================
+
+______________________________________________
+        const prices =[12,12,3423,121];
+        prices.push(1000000) // add value to last index
+        prices.push(1212,1212,1212,122)
+        console.log(prices) 
+        prices.pop()  // delete the last element
+        console.log(prices)
+_______________________________________________
+
+
+=========================================
+3. toString -> converts array to string
+=========================================
+
+_______________________________________________
+        const prices =[12,12,3423,121];
+        let str = prices.toString();
+        console.log(typeof str) // string
+        console.log(str) // "12,12,3423,121"    
+_______________________________________________
+
+
+=========================================
+4. join -> converts array to string with specified separator
+=========================================
+_______________________________________________
+        const prices =[12,12,3423,121];
+        let str = prices.join(" - ");
+        console.log(typeof str) // string
+        console.log(str) // "12 - 12 - 3423 - 121"
+_______________________________________________
+
+=========================================
+5. shift -> removes the first element
+=========================================
+_______________________________________________
+        const prices =[12,12,3423,121];
+        prices.shift() // removes first element
+        console.log(prices) // [12, 3423, 121]
+_______________________________________________
+
+=========================================
+6. unshift -> adds element at the beginning
+=========================================
+_______________________________________________
+        const prices =[12,12,3423,121];
+        prices.unshift(9999) // adds 9999 at the beginning
+        console.log(prices) // [9999, 12, 12, 3423, 121]
+_______________________________________________
+
+=========================================
+7. concat -> merges two or more arrays , does not change existing arrays , returns a new array
+=========================================
+_______________________________________________
+        const arr1 =[1,2,3];
+        const arr2 =[4,5,6];
+        const merged = arr1.concat(arr2);
+        console.log(merged) // [1, 2, 3, 4, 5, 6]
+_______________________________________________
+
+=========================================
+8. splice -> adds/removes elements at specified index
+=========================================
+
+> takes 3 arguments
+1. starting index
+2. number of elements to remove
+3. elements to add (optional)
+splice(starting index, number of elements to remove, elements to add)
+_______________________________________________
+        const numbers =[10,20,30,40,50];
+        // remove 2 elements from index 1 and add 25, 35
+
+        numbers.splice(1, 2, 25, 35);
+        console.log(numbers) // [10, 25, 35, 40, 50]    
+_______________________________________________
+only adding elements using splice
+-----------------------------------------------
+  const arr= [1,2,3,4,5];
+    //add the element 10 after 2
+    arr.splice(2,0,10);
+    console.log(arr) // [1, 2, 10, 3, 4, 5]
+_______________________________________________
+only removing elements using splice
+-----------------------------------------------
+ const arr= [1,2,3,4,5];
+    //remove 3rd element
+    arr.splice(2,1);
+    console.log(arr) // [1, 2, 4, 5]    
+_______________________________________________
+remove all elements from a specific index work as slice
+-----------------------------------------------
+const arr= [1,2,3,4,5];
+    //remove all elements from index 2
+    arr.splice(2);
+    console.log(arr) // [1, 2]
+_______________________________________________
+ 
+
+=========================================
+9. slice -> creates a {new array} by extracting a portion of an existing array
+=========================================
+_______________________________________________
+        const numbers =[10,20,30,40,50];
+        const newArray = numbers.slice(1, 4); // extracts elements from index 1 to 3
+        console.log(newArray) // [20, 30, 40]
+_______________________________________________
+         const numbers =[10,20,30,40,50];
+        const newArray = numbers.slice(2); // extracts elements from index 2 to end 
+        console.log(newArray) // [30, 40, 50]
+_______________________________________________ 
+
+=========================================
+10. indexOf -> returns the first index of a specified element
+=========================================
+_______________________________________________
+        const fruits =["Apple", "Banana", "Cherry", "Banana"];
+        const index = fruits.indexOf("Banana");
+        console.log(index) // 1
+_______________________________________________
+
+=========================================   
+TO replaces a specified element with a new element
+=========================================
+_______________________________________________
+        const fruits =["Apple", "Banana", "Cherry"];
+        const index = fruits.indexOf("Banana");
+        if(index !== -1){
+            fruits[index] = "Mango";
+        }
+        console.log(fruits) // ["Apple", "Mango", "Cherry"]
+_______________________________________________
