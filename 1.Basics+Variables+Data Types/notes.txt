@@ -1,0 +1,215 @@
+{{ null }}
+->Variable k xa vanera tha ta hunxa
+but  empty value xa  
+
+{{ undefined }}
+-> Variable ma k xa vanera tha nai nahunu
+
+{{Boolean}}
+-> true or false
+
+========================================
+ JS is the dynamically Typed Language 
+========================================
+means we dont need to say initially the data type 
+
+also 
+paila "a" ma string thiyo vaney pani 
+pachi a =10 num store garna sakincha
+That's why we need TS
+
+_________________________________________________________________
+ <script>
+        let a= 10;
+        a= "ram";
+        console.log("hello world",a) --> prints hello world ram
+    </script>
+__________________________________________________________________
+
+
+=========================
+rules for variable name
+=========================
+1. Case sensative >>> apple & Apple are different
+2. Only letters , digit, underscore(_) and dollar($) are allowed
+3.Reserved words can be used , for eg :- console, function
+
+
+Convenctional --> camel casing --> fullName, userId
+snake case --> full_name, user_id
+
+
+
+==========================================
+                 Variables
+==========================================
+
+
+=========
+  1.var 
+=========
+global scope, can be redeclared and update
+________________________________________________________________________
+     var rollNo = 186;
+     console.log(rollNo);
+     var rollNo = 110;
+     console.log(rollNo);
+     var rollNo = "ram";
+     console.log(rollNo);
+     {
+        console.log(rollNo, "inside block"); // do print as it is global 
+     }
+_________________________________________________________________________
+
+
+==========
+ 2. let 
+==========
+can't be redeclared but can be updated,  block scope
+____________________________________________________________________________________
+ let rollNo = 186;
+     console.log(rollNo);
+     rollNo = 110;
+     console.log(rollNo);
+    rollNo = "ram";
+     console.log(rollNo);
+
+     {
+        
+        console.log(rollNo, "inside block"); // do print as rollno is declared in global scope 
+        
+        let college ="pulchowk";
+        console.log(college);
+        {
+            console.log(college, "inside nested block")
+            console.log(rollNo, "inside nested block")
+
+        }
+     }
+     console.log(college) //can get college variable as it is declared inside block
+_________________________________________________________________________________________
+
+==============
+  3. const
+==============
+can't be redeclared and updated, block scope
+
+_________________________________________________________________________________________
+     const rollNo = 186;
+     console.log(rollNo);
+    //  rollNo = 110; /// can't resign
+     console.log(rollNo);
+
+
+     {
+        
+        console.log(rollNo, "inside block"); // do print as rollno is declared in global scope  output  --> 186 'inside block'
+        
+        let college ="pulchowk";
+        console.log(college);
+        {
+            console.log(college, "inside nested block") // --> pulchowk inside nested block
+            console.log(rollNo, "inside nested block") // --> 186
+
+        }
+     }
+     console.log(college)/////// can get college variable as it is declared insidle block
+     conet college = "Ram"
+     console.log(college) // --> Ram
+________________________________________________________________________________________
+
+
+=============
+IN let 
+we can -> let a; // allowed
+=================-------------
+
+========================
+IN const 
+we can not -> const a;  // not allowed
+=========================-------------------
+
+
++==========================================
+                Datatypes =
+         Primitive + Non - Primitive 
+===========================================
+
+============================
+   Primitive Datatypes
+============================
+
+1. Number     -> 1212
+2. string     -> "323djafkj", "sd"
+3. Boolean    -> true, false
+4. undefined
+5. null
+6. BigInt
+7. Symbol
+
+_______________________________________________
+    let name = "hari";
+    console.log(typeof (name)); // string
+    let roll = 12;
+    console.log(typeof(roll)); //number
+    console.log(typeof(true)) // boolean
+    console.log(typeof(null)) // -> object
+    console.log(typeof(undefined)) // undefined
+
+    let a = BigInt(123)
+    console.log(a)  // 123n
+    console.log(typeof(a)) // bigint
+
+    let b = Symbol('hello')
+    console.log(b) //Symbol(hello)
+    console.log(typeof(b))
+_________________________________________________
+
+
+
+Note: primitive data type ma
+if
+a=12;
+b=a;    // value equal
+
+b=10; garda a = 12 nai hunxa
+
+but
+not -primitive ma
+a=[1,2]
+b=a    // refrence equal
+b=[2,3] garda a pani [2,3] hunxa
+
+============================
+        Non Primitive
+============================
+
+1.object
+
+const user ={
+   name : "ram",
+   roll :12
+}
+
+
+here name, roll are value
+______________________________________
+console.log(user.name)
+user.name = "hari"
+console.log(["user.name"])
+______________________________________
+
+even const ma user banaye pani change hunxa IN obj ko key update garna sakinxa
+
+
+
+=============================
+1+1
+ = 2
+
+1 + "1" 
+= 11
+
+"12" +1
+=121
+=============================

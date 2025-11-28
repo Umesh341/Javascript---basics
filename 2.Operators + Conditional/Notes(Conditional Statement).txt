@@ -1,0 +1,46 @@
+===================================================
+    Conditional Statement
+=====================================================
+
+if(condition){
+
+    // excute when condition is true
+}
+else if(condition2){
+ //  
+}
+
+
+else{
+    // excute when condition is not true
+}
+
+
+// conditional Operator
+
+(Statement): if true: false
+
+result = age>10 : true : false
+
+
+h/w --> switch
+
+
+______________________________________________________
+const a = prompt("enter a number")
+const b = prompt("enter a number")
+
+
+console.log(a + b) // concatenation
+console.log(Number(a) + Number(b)) // addition
+_________________________________________________
+
+
+___________________________________________________________
+const a = parseInt(prompt("enter a number"))
+const b = parseInt(prompt("enter a number"))
+
+
+console.log(a + b) // addition
+console.log(String(a) + String(b)) // concatenation
+____________________________________________________________

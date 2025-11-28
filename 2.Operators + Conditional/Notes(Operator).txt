@@ -1,0 +1,96 @@
+// single line comment
+ /*
+    multiline 
+    comment
+ */
+
+=============================================
+            Operators
+===========================================
+
+Used to perform some operation
+
+
+=========================
+1. Arithematic operation
+=========================
++,-,*, /, %,++,--
+
+a+b
+
+a,b = operands
++ Operator
+
+a+b = expression
+
+
+modulus - %
+ -> gives the value of remainder
+
+exponential - **
+a** == a*a
+
+==============
+unary Operator ==    ++, --
+===============
+
+____________________________________________________
+
+   let a= 12;
+   console.log(++a); // preincrement -> 13
+   let b = 12;
+   console.log(b++); // postincrement -> 12
+
+   // similar in decrement
+_____________________________________________________
+
+
+
+===================================
+2.Assignment Operator
+====================================
+
+=  ,  +=  ,  -= , *=  , **= 
+
+a +=    --->  a = a+1 
+
+___________________________________________________
+
+   let c =1;
+    c += 3;
+    console.log(c)
+    let d= 1;
+    d = d+3;
+    console.log(d)
+    let e =2;
+    e **= 5 ;
+    console.log(e)  /  2*2*2*2*2
+   // similar in decrement
+_______________________________________________________
+
+
+=========================================
+3.Comparison Operator
+=========================================
+
+Equal to ==
+Equal to and type ===
+not Equal to !=
+not Equal to and type !==
+
+<  ,  >  ,  >=   ,  <= 
+
+___________________________________________________
+console.log("1" == 1) // true
+console.log("1" === 1) // false
+__________________________________________________
+
+
+=================================================
+4. Logical Operator
+==================================================
+
+Logical And   &&
+Logical OR    ||
+Logical Not    !
+
