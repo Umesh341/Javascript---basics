@@ -32,7 +32,7 @@ rules for variable name
 =========================
 1. Case sensative >>> apple & Apple are different
 2. Only letters , digit, underscore(_) and dollar($) are allowed
-3.Reserved words can be used , for eg :- console, function
+3. Reserved words can be used , for eg :- console, function
 
 
 Convenctional --> camel casing --> fullName, userId
