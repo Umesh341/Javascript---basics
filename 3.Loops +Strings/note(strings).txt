@@ -3,3 +3,57 @@
 ===================================================================
 
 > SEQUENCE OF character used to represent the text
+
+
+
+=====================================
+1. str.trim() -> removes the whitespaces
+2. str.slice(1,4) -> returns the part of the string
+3. str.concat(str2) -> concat str with str2
+4. str.replace(searchVal, newVal)
+5. str.charAt(e) 
+=====================================
+_________________________________________________________________
+
+let str = "Hello World";
+
+// Inbuilt methods
+console.log("Length of the string:", str.length); // 11
+console.log("Character at index 2:", str.charAt(2));  // l
+console.log("Uppercase:", str.toUpperCase());
+console.log("Lowercase:", str.toLowerCase());
+console.log("Index of 'World':", str.indexOf("World"));  // 6
+
+console.log("Substring (0,3):", str.substring(0, 3)); // Hel
+
+console.log("Replace 'Hello' with 'Hi':", str.replace("Hello", "Hi"));  // Hi World
+
+console.log("Concatenate with ' World':", str.concat(" World")); // Hello World World
+
+console.log("Trimmed string:", "   Hello   ".trim()); // "Hello"   
+
+
+console.log("Split by 'e':", str.split("e")); // [ 'H', 'llo World' ]
+
+// Template Literals    
+let name = "John";
+let age = 30;
+console.log(`My name is ${name} and I am ${age} \n years old. ${1+2+4}`);  
+________________________________________________________________
+
+Escape Character
+\n -> next line  count as the single character
+________________________________________________________
+let multiLineStr = `Th\nat`;
+console.log(multiLineStr.length); // 5
+_____________________________________________________________
+
+=========================================
+             immutable
+========================================
+_____________________________________________________________________
+let str1= "hello"
+str1[0]= "a";
+console.log(str1) //strings are immutable in js, so output will be hello 
+// it can be acheived with replace function
+__________________________________________________________________
