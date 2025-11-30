@@ -19,11 +19,11 @@ pachi a =10 num store garna sakincha
 That's why we need TS
 
 _________________________________________________________________
- <script>
+<script>
         let a= 10;
         a= "ram";
         console.log("hello world",a) --> prints hello world ram
-    </script>
+</script>
 __________________________________________________________________
 
 
@@ -41,14 +41,15 @@ snake case --> full_name, user_id
 
 
 ==========================================
-                 Variables
+               Variables
 ==========================================
 
 
 =========
   1.var 
 =========
-global scope, can be redeclared and update
+>> global scope, can be redeclared and update
+>> generally avoided
 ________________________________________________________________________
      var rollNo = 186;
      console.log(rollNo);
@@ -65,7 +66,7 @@ _________________________________________________________________________
 ==========
  2. let 
 ==========
-can't be redeclared but can be updated,  block scope
+>> can't be redeclared but can be updated,  block scope
 ____________________________________________________________________________________
  let rollNo = 186;
      console.log(rollNo);
@@ -172,13 +173,13 @@ if
 a=12;
 b=a;    // value equal
 
-b=10; garda a = 12 nai hunxa
+b=10; // garda a = 12 nai hunxa
 
 but
 not -primitive ma
 a=[1,2]
 b=a    // refrence equal
-b=[2,3] garda a pani [2,3] hunxa
+b=[2,3] // garda a pani [2,3] hunxa
 
 ============================
         Non Primitive
@@ -192,14 +193,14 @@ const user ={
 }
 
 
-here name, roll are value
+here name, roll are key
 ______________________________________
 console.log(user.name)
 user.name = "hari"
 console.log(["user.name"])
 ______________________________________
 
-even const ma user banaye pani change hunxa IN obj ko key update garna sakinxa
+Note : even const ma user banaye pani change hunxa IN obj ko key update garna sakinxa
 
 
 

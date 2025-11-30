@@ -1,0 +1,117 @@
+=====================================================
+           DOM -> Document Object Model
+=====================================================
+
+----------------
+ Window object
+----------------
+> represents open window in the browser
+> Its the browser's object not the JS 
+> it is automatically created by the browser
+> global object with lots of properties and methods
+
+
+
+===========
+DOM
+============
+> html haru sabai JS bata access garna sakinxa
+> automatically html ko sabai element JS ma aayera Object ma convert hunxa jaslai hami document object vanxau
+> and the document object inside the window object create hunxa
+
+_____________________________________________________________
+console.dir(window.document); // print properties and methods
+_____________________________________________________________
+
+
+ document.body.style.background = "grey"
+
+
+ ========================================
+ reason add script tag at last
+ ========================================
+ cause>> body vanda aagadi rakhda paila js run hunxa and we cannot access the body tag if head vitra rakhyo vaney
+
+
+
+
+ ------------------------------------------------------
+                DOM Manipulation
+ ------------------------------------------------------
+
+========================
+ ways to select element
+=========================
+ 
+
+1. [ By ID   ]
+_____________________________________________________________
+const heading = document.getElementById("heading");
+console.log(heading)
+console.dir(heading)
+_____________________________________________________________
+
+2. [  By class   ]
+_______________________________________________
+const content = document.getElementsByClassName("content");
+console.log(content)  // gives html collection similar to array , not same
+console.dir(content)
+_______________________________________________
+
+note: when na vage ko id print garda    - null return
+           na vaye ko class print garda - empty HTML collection return 
+
+3. [    by tag  ]
+__________________________________________________________________
+const paras = document.getElementsByTagName("p");
+console.log(paras)
+___________________________________________________________________
+
+=============
+querySelector
+=============
+___________________________________________________________________
+const firstElement = document.querySelector("p"); //tag
+//const firstElement = document.querySelector("p"); //tag
+//const firstElement = document.querySelector("#p"); //id
+
+console.log(firstElement)
+
+const allElement = document.querySelectorAll("p");
+console.log(allElement) // returns the note list
+____________________________________________________________________
+
+
+
+===========================
+properties
+>>> can get, set, or update
+============================
+
+1. tagName -> returns the tag name of the element
+2. innerText -> returns the text content of the element
+3. innerHTML -> returns the html content of the element
+4. textContent -> returns the text content of the element including hidden text
+
+------------------------------------------------------
+                DOM Manipulation
+ ------------------------------------------------------
+1. createElement -> to create new element
+2. createTextNode -> to create text node
+3. appendChild -> to add child node to parent node
+4. removeChild -> to remove child node from parent node
+5. replaceChild -> to replace child node with new node
+6. setAttribute -> to set attribute to an element
+7. getAttribute -> to get attribute of an element
+8. removeAttribute -> to remove attribute from an element
+
+------------------------------------------------------
+                DOM Styling
+ ------------------------------------------------------
+1. element.style.property = value -> to set inline style to an element
+2. element.classList.add(className) -> to add class to an element
+3. element.classList.remove(className) -> to remove class from an element
+4. element.classList.toggle(className) -> to toggle class of an element
+5. element.classList.contains(className) -> to check if an element has a class
+
+
